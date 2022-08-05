@@ -52,10 +52,9 @@
         </div>
     </nav>
     <!--Banner-->
-    <div name="banner"
-        class="py-20 grid grid-cols-1 justify-center items-center md:py-96 md:pt-80 md:pb-32 md:flex md:flex-col md:justify-end md:items-end lg:py-96 lg:flex lg:flex-col lg:justify-end lg:items-end">
+    <div name="banner" class="py-20 grid grid-cols-1 md:py-96 md:pt-80 md:pb-32 md:flex md:flex-col md:justify-end md:items-end lg:py-96 lg:flex lg:flex-col lg:justify-end lg:items-end">
         <p
-            class="text-<%=diseno.claro.color.banner.titulo%> dark:text-<%=diseno.oscuro.color.banner.titulo%> text-2xl font-bold px-20 md:text-right md:text-5xl lg:text-5xl md:font-bold md:px-44 lg:text-right lg:text-5xl lg:font-bold lg:px-44">
+            class="parrafo text-<%=diseno.claro.color.banner.titulo%> dark:text-<%=diseno.oscuro.color.banner.titulo%> text-2xl font-bold px-20 md:text-right md:text-5xl lg:text-5xl md:font-bold md:px-44 lg:text-right lg:text-5xl lg:font-bold lg:px-44">
             <%=contenido.data.banner.titulo%>
     </div>
     <!--End Banner-->
@@ -77,20 +76,16 @@
 <section name="primera_seccion">
     <div class="bg-<%=diseno.claro.color.primera_seccion.fondo%>-600 dark:bg-<%=diseno.oscuro.color.primera_seccion.fondo%>-900 py-10 w-auto grid grid-cols-1 gap-4 md:py-20 md:w-auto md:grid md:grid-cols-2 md:gap-4   lg:py-20 lg:w-auto lg:grid lg:grid-cols-2 lg:gap-4">
         <div class="block sm:hidden lg:hidden text-xl pl-20 text-<%=diseno.claro.color.primera_seccion.listado%> dark:text-<%=diseno.oscuro.color.primera_seccion.listado%>  font-bold flex flex-col justify-start ">
-            <ul class="px-20">
-             <%=contenido.data.primera_seccion.listado%>
-            </ul>
+            <ul class="parrafo px-20"><%=contenido.data.primera_seccion.listado%></ul>
         </div>
 
         <div class="text-sm  text-<%=diseno.claro.color.primera_seccion.titulo%>  dark:text-<%=diseno.oscuro.color.primera_seccion.titulo%>-600 leading-tight font-bold lg:text-2xl md:text-2xl   
         md:leading-tight md:font-bold md:flex md:flex-col md:justify-start md:items-center     
         lg:leading-tight lg:font-bold lg:flex lg:flex-col lg:justify-start lg:items-center">
-		<p class="pl-10"><%=contenido.data.primera_seccion.titulo%></p>
+		<p class="parrafo pl-10"><%=contenido.data.primera_seccion.titulo%></p>
         </div>
         <div class="hidden sm:block lg:block text-2xl sm:text-base pt-8 text-<%=diseno.claro.color.primera_seccion.listado%> dark:text-<%=diseno.oscuro.color.primera_seccion.listado%> font-bold flex flex-col justify-start items-center">
-            <ul>
-                <%=contenido.data.primera_seccion.listado%>
-            </ul>
+            <ul class="parrafo"><%=contenido.data.primera_seccion.listado%></ul>
         </div>
         
         <div class="grid grid-cols-4 block md:hidden lg:hidden">
@@ -118,36 +113,26 @@
             <img src="/assets/img/business-people.jpg" alt="">
         </div>
         <div class="pt-10 pb-10 pl-10 pr-10 h-auto text-xs justify-start items-center">
-            <p class="text-<%=diseno.claro.color.segunda_seccion.parrafo_izq%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_izq%> font-semibold">
-                <%=contenido.data.segunda_seccion.parrafo_izq%>
-            </p>
+            <p class="parrafo text-<%=diseno.claro.color.segunda_seccion.parrafo_izq%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_izq%> font-semibold"><%=contenido.data.segunda_seccion.parrafo_izq%></p>
         </div>
 
         <div class=" justify-center items-center pl-10 pr-10">
             <img src="/assets/img/business-man-talk.jpg" alt="">
         </div>
         <div class="h-auto md:text-base lg:text-lg font-semibold pl-10 pr-10 py-10">
-            <p class="text-<%=diseno.claro.color.segunda_seccion.parrafo_der%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_der%>">
-                <%=contenido.data.segunda_seccion.parrafo_der%>
-            </p>
+            <p class="parrafo text-<%=diseno.claro.color.segunda_seccion.parrafo_der%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_der%>"><%=contenido.data.segunda_seccion.parrafo_der%></p>
         </div>
         <div class=" h-auto justify-start ">
-            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.titulo%>-600 md:text-4xl lg:text-5xl font-normal pl-10 pr-10">
-                <%=contenido.data.segunda_seccion.subseccion.titulo%>
-            </p>
+            <p class="parrafo text-<%=diseno.claro.color.segunda_seccion.subseccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.titulo%>-600 md:text-4xl lg:text-5xl font-normal pl-10 pr-10"><%=contenido.data.segunda_seccion.subseccion.titulo%></p>
         </div>
         <div class="h-auto justify-start pl-10 pr-10 py-10">
-            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.subtitulo%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.subtitulo%> sm:text-2xl lg:text-4xl">
-                <%=contenido.data.segunda_seccion.subseccion.subtitulo%>
-            </p>
+            <p class="parrafo text-<%=diseno.claro.color.segunda_seccion.subseccion.subtitulo%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.subtitulo%> sm:text-2xl lg:text-4xl"><%=contenido.data.segunda_seccion.subseccion.subtitulo%></p>
         </div>
         <div class="h-auto"></div>
         <div class="h-auto sm:pl-10 lg:flex flex-col justify-start items-center">
             <ul class="leading-loose text-<%=diseno.claro.color.segunda_seccion.subseccion.detalle%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.detalle%> sm:text-xl lg:text-2xl font-semibold">
                 <div class=" h-auto">
-                    <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.detalle%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.detalle%> pb-10 ">
-                        <%=contenido.data.segunda_seccion.subseccion.detalle.tab_uno%>
-                    </p>
+                    <p class="parrafo text-<%=diseno.claro.color.segunda_seccion.subseccion.detalle%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.detalle%> pb-10 "><%=contenido.data.segunda_seccion.subseccion.detalle.tab_uno%></p>
                 </div>
                 <li class="text-<%=diseno.claro.color.segunda_seccion.subseccion.listado%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.listado%> hover:font-bold"><%=contenido.data.segunda_seccion.subseccion.listado.tab_uno%></li>
                 <li class="text-<%=diseno.claro.color.segunda_seccion.subseccion.listado%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.listado%> hover:font-bold"><%=contenido.data.segunda_seccion.subseccion.listado.tab_dos%></li>
@@ -166,11 +151,9 @@
         <div class="md:pl-10 lg:pl-40 h-auto font-semibold tracking-widest">
             <p class="text-<%=diseno.claro.color.segunda_seccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.segunda_seccion.titulo%>-600"><%=contenido.data.segunda_seccion.titulo%></p>
         </div>
-        <div class="text-<%=diseno.claro.color.segunda_seccion.subtitulo%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subtitulo%> h-auto text-black md:text-4xl lg:text-5xl">
-            <%=contenido.data.segunda_seccion.subtitulo%>
-        </div>
+        <div class="parrafo text-<%=diseno.claro.color.segunda_seccion.subtitulo%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subtitulo%> h-auto text-black md:text-4xl lg:text-5xl"><%=contenido.data.segunda_seccion.subtitulo%></div>
         <div class="pt-10 h-auto flex flex-col justify-start items-center">
-            <p class="text-<%=diseno.claro.color.segunda_seccion.parrafo_izq%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_izq%> md:text-base lg:text-lg font-semibold"><%=contenido.data.segunda_seccion.parrafo_izq%></p>
+            <p class="parrafo text-<%=diseno.claro.color.segunda_seccion.parrafo_izq%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_izq%> md:text-base lg:text-lg font-semibold"><%=contenido.data.segunda_seccion.parrafo_izq%></p>
         </div>
         <div class="h-auto md:w-80">
             <img src="/assets/img/business-people.jpg" alt="">
@@ -179,17 +162,13 @@
             <img src="/assets/img/business-man-talk.jpg" alt="">
         </div>
         <div class="h-auto md:text-base lg:text-lg font-semibold">
-            <p class="text-<%=diseno.claro.color.segunda_seccion.parrafo_der%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_der%>">
-                <%=contenido.data.segunda_seccion.parrafo_der%>
-            </p>
+            <p class="parrafo text-<%=diseno.claro.color.segunda_seccion.parrafo_der%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_der%>"><%=contenido.data.segunda_seccion.parrafo_der%></p>
         </div>
         <div class="col-span-2 h-auto flex flex-col justify-start items-center">
-            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.titulo%>-600 md:text-4xl lg:text-5xl font-normal "> <%=contenido.data.segunda_seccion.subseccion.titulo%>
-            </p>
+            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.titulo%>-600 md:text-4xl lg:text-5xl font-normal"><%=contenido.data.segunda_seccion.subseccion.titulo%></p>
         </div>
         <div class="h-auto flex flex-col justify-start items-center">
-            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.subtitulo%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.subtitulo%> sm:text-2xl lg:text-4xl"> <%=contenido.data.segunda_seccion.subseccion.subtitulo%>
-            </p>
+            <p class="parrafo text-<%=diseno.claro.color.segunda_seccion.subseccion.subtitulo%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.subtitulo%> sm:text-2xl lg:text-4xl"><%=contenido.data.segunda_seccion.subseccion.subtitulo%></p>
         </div>
         <div class="h-auto"></div>
         <div class="h-auto sm:pl-10 lg:flex flex-col justify-start items-center">
@@ -201,9 +180,7 @@
             </ul>
         </div>
         <div class="-ml-40 h-auto">
-            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.detalle%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.detalle%> sm:text-lg lg:text-xl">
-                <%=contenido.data.segunda_seccion.subseccion.detalle.tab_uno%>
-            </p>
+            <p class="parrafo text-<%=diseno.claro.color.segunda_seccion.subseccion.detalle%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.detalle%> sm:text-lg lg:text-xl"><%=contenido.data.segunda_seccion.subseccion.detalle.tab_uno%></p>
         </div>
     </div>
 </section>
@@ -211,21 +188,17 @@
 <section name="tercera_seccion">
     <div class="bg-<%=diseno.claro.color.tercera_seccion.fondo%> dark:bg-<%=diseno.oscuro.color.tercera_seccion.fondo%>-900 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="pl-10 sm:pl-10 lg:pl-40">
-            <p class="text-<%=diseno.claro.color.tercera_seccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.tercera_seccion.titulo%>-600 font-semibold tracking-widest">
-                <%=contenido.data.tercera_seccion.titulo%>
-            </p>
+            <p class="text-<%=diseno.claro.color.tercera_seccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.tercera_seccion.titulo%>-600 font-semibold tracking-widest"><%=contenido.data.tercera_seccion.titulo%></p>
         </div>
         <div class="pl-10 md:pr-56 lg:pr-56">
-            <p class="text-<%=diseno.claro.color.tercera_seccion.subtitulo%> dark:text-<%=diseno.oscuro.color.tercera_seccion.subtitulo%> text-2xl md:text-4xl lg:text-4xl">
-                <%=contenido.data.tercera_seccion.subtitulo%>
-            </p>
+            <p class="parrafo text-<%=diseno.claro.color.tercera_seccion.subtitulo%> dark:text-<%=diseno.oscuro.color.tercera_seccion.subtitulo%> text-2xl md:text-4xl lg:text-4xl"><%=contenido.data.tercera_seccion.subtitulo%></p>
         </div>
     </div>
 </section>
 <!--Sección imagen-->
 <section name="pexels">
     <div>
-        <img src="assets/img/pexels-fauxels-3184302.jpg" alt="">
+        <img src="/assets/img/pexels-fauxels-3184302.jpg" alt="">
     </div>
 </section>
 <!--Cuarta sección-->
@@ -233,20 +206,15 @@
     <div class="bg-<%=diseno.claro.color.cuarta_seccion.fondo%> dark:bg-<%=diseno.oscuro.color.cuarta_seccion.fondo%>-900 py-20 grid md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="pl-10 flex flex-col justify-start lg:items-center sm:pl-20">
             <p class="text-<%=diseno.claro.color.cuarta_seccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.cuarta_seccion.titulo%>-600 text-2xl font-semibold"><%=contenido.data.cuarta_seccion.titulo%></p>
-            <p class="pt-10 text-xs text-<%=diseno.claro.color.cuarta_seccion.parrafo%> dark:text-<%=diseno.oscuro.color.cuarta_seccion.parrafo%> md:text-lg lg:text-lg font-semibold">
-                <%=contenido.data.cuarta_seccion.parrafo%>
-            </p>
-
+            <p class="parrafo pt-10 text-xs text-<%=diseno.claro.color.cuarta_seccion.parrafo%> dark:text-<%=diseno.oscuro.color.cuarta_seccion.parrafo%> md:text-lg lg:text-lg font-semibold"><%=contenido.data.cuarta_seccion.parrafo%></p>
         </div>
         <div class="flex flex-col justify-center items-center w-40 md:w-80 lg:w-80">
-            <img class="hidden dark:block" src="assets/img/ilustraciones para web-black.png" alt="">
-            <img class="block dark:hidden" src="assets/img/ilustraciones para web-white.png" alt="">
+            <img class="hidden dark:block" src="/assets/img/ilustraciones para web-black.png" alt="">
+            <img class="block dark:hidden" src="/assets/img/ilustraciones para web-white.png" alt="">
         </div>
         <div
             class="pl-10 md:pd-0 lg:pd-0 pt-10 col-span-2  flex flex-col md:justify-center md:items-center lg:justify-center lg:items-center">
-            <p class="text-<%=diseno.claro.color.cuarta_seccion.slogan%>-600 dark:text-<%=diseno.oscuro.color.cuarta_seccion.slogan%>-600 sm:text-4xl lg:text-5xl font-normal">
-                <%=contenido.data.cuarta_seccion.slogan%>
-            </p>
+            <p class="parrafo text-<%=diseno.claro.color.cuarta_seccion.slogan%>-600 dark:text-<%=diseno.oscuro.color.cuarta_seccion.slogan%>-600 sm:text-4xl lg:text-5xl font-normal"><%=contenido.data.cuarta_seccion.slogan%></p>
         </div>
     </div>
 </section>
@@ -258,12 +226,12 @@
                 <p><%=contenido.data.footer.contacto.email%></p>
                 <br class="block md:hidden lg:hidden">
                 <p class=""><%=contenido.data.footer.contacto.celular%></p>
-                <img class="w-96 pt-20 hidden dark:block" src="assets/img/logo noumanity-white.png" alt="">
+                <img class="w-96 pt-20 hidden dark:block" src="/assets/img/logo noumanity-white.png" alt="">
             </quote>
         </div>
     </div>
     <div class=" block dark:hidden grid grid-cols-3 bg-black">
-        <img class="w-96 pl-10 block dark:hidden" src="assets/img/logo noumanity-white.png" alt="">
+        <img class="w-96 pl-10 block dark:hidden" src="/assets/img/logo noumanity-white.png" alt="">
     </div>
     <div
         class="sm:pl-10 sm:text-xs text-sm bg-<%=diseno.claro.color.footer.fondo%>-900 dark:bg-<%=diseno.oscuro.color.footer.fondo%>-600 lg:px-20 pb-5 flex flex-grow justify-between">

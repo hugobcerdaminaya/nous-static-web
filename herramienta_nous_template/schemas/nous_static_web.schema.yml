@@ -71,7 +71,7 @@ properties:
         type: text
         title: Título
       subtitulo:
-        type: text
+        type: textarea
         title: Subtitulo
       parrafo_izq:
         type: textarea
@@ -85,10 +85,10 @@ properties:
         required: true  
         properties:
           titulo:
-            type: text
+            type: textarea
             title: Título
           subtitulo:
-            type: text
+            type: textarea
             title: Subtitulo
           listado:
             type: object
@@ -133,7 +133,7 @@ properties:
         type: text
         title: Título
       subtitulo:
-        type: text
+        type: textarea
         title: Subtitulo
   cuarta_seccion:
     type: object

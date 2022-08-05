@@ -860,6 +860,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(30 58 138 / var(--tw-text-opacity));
 }
 
+.parrafo {
+  white-space: pre;
+}
+
 @media (prefers-color-scheme: dark){
   .dark\:block{
     display: block;
