@@ -2,7 +2,7 @@ type: object
 properties:
   pagina:
     type: object
-    title: Información de la página
+    title: Información
     required: true
     properties:
       titulo:

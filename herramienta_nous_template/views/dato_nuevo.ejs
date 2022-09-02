@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AWM</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css">
+  <link rel="stylesheet" href="/assets/css/starter-template.css">
+  
+</head>
+<body class="container">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Aplicacion web movil / Datos</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Aplicacion web movil / Datos</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="starter-template-form">
+      <h1>Formulario para agregar nuevos datos</h1>
+      <a href="/datos" class="btn btn-sm btn-primary text-center button-form"> << Regresar a tabla de datos</a>
+      <input id="data" type="hidden" value="<%= formulario %>" />
+      <form action="/save-values" method="POST"></form>
+      <div id="res" class="alert"></div>
+    </div>
+  </div>    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.4/underscore-umd-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonform/2.2.5/jsonform.js"></script>
+  <script>
+   let data = JSON.parse(document.getElementById("data").value);
+   $('form').jsonForm({
+        schema: {
+          data
+        },
+        form:    
+        [
+          "*",
+        {
+          type: "submit",
+          title: "Enviar formulario"  
+        }
+      ],
+        onSubmit: function (errors, values) {
+          if (errors) {
+            $('#res').html('<p>Ha ocurrido un error al momento de intentar enviar el formulario</p>');
+          }else{
+            $.ajax({
+              type: "POST",
+              url: '/save-values-sitio',
+              data: {values: values, id: false },
+              success: function(result){
+                $('#res').html('<p>La página ' + values.data.pagina.titulo + ' con fecha <br/>' +
+                values.data.pagina.fecha + ', ha sido creada. </p>');   
+                window.location.href = '/sitio/contenido';  
+              }
+            });
+          }
+        }
+      });
+  </script>
+</body>
+</html>

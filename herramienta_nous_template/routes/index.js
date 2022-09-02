@@ -25,48 +25,18 @@ try {
 } 
 
 router.get('/', (req, res, next) => {
-    if (fs.existsSync(path_build_index)) {
-        res.render('index_build');
-    }else{
-        res.render('index_default');
-    }
+  res.render('esquemas');
 });
 
-router.get('/login', (req, res, next) => {
-    res.render('login');
+router.get('/esquemas', (req, res, next) => {
+  res.render('esquemas');
 });
 
-router.post('/login', passport.authenticate('local-signin',
-{
-  successRedirect: "/panel_administrativo",
-  failureRedirect: "/login"
-}), (req, res) => {
-  
+router.get('/datos', (req, res, next) => {
+  res.render('datos');
 });
 
-router.get("/logout", (req, res) => {
-    req.logout(req.user, err => {
-      if(err) return next(err);
-      res.redirect("/");
-    });
-  });
 
-function isAuthenticated(req, res, next){
-    if(req.isAuthenticated()){
-        return next();
-    } 
-    res.redirect("/login");
-}
-
-router.use((req, res, next)=>{
-    isAuthenticated(req, res, next);
-    next();
-});
-
-router.get('/panel_administrativo', (req, res, next) => {
-      let sessionUsuario = req.session.passport.user;
-      res.render('panel_administrativo', {usuario: sessionUsuario.nombre, rol: sessionUsuario.rol});
-  });
 
   router.get('/blog/contenido', (req, res, next) => {
     if (!fs.existsSync(path_contenidos_blog)) { 
@@ -178,12 +148,12 @@ router.get('/panel_administrativo', (req, res, next) => {
     res.redirect('/sitio/contenido');
   });
   
-  router.get('/sitio/nuevo', (req, res, next) => {
-    let sessionUsuario = req.session.passport.user;
-    if(sessionUsuario.rol == 'Proveedor de diseño'){
-      res.redirect("/panel_administrativo")
-    }
-    res.render('nous_static_web_nuevo', {formulario:  JSON.stringify(esquema_formulario_sitio, 'utf-8'), usuario: sessionUsuario.nombre, rol: sessionUsuario.rol});
+  router.get('/esquema/nuevo', (req, res, next) => {
+    res.render('esquema_nuevo', {formulario:  JSON.stringify(esquema_formulario_sitio, 'utf-8')});
+  });
+
+  router.get('/dato/nuevo', (req, res, next) => {
+    res.render('dato_nuevo', {formulario:  JSON.stringify(esquema_formulario_sitio, 'utf-8')});
   });
   
   router.get('/sitio/diseno', (req, res, next) => {
